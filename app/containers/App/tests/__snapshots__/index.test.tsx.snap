@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should render and match the snapshot 1`] = `
+<styled.div>
+  <Helmet
+    defaultTitle="Bank Management System"
+    defer={true}
+    encodeSpecialCharacters={true}
+    titleTemplate="%s - Bank Management System"
+  >
+    <meta
+      content="Bank Management System"
+      name="description"
+    />
+  </Helmet>
+  <div
+    className="container-fluid px-0"
+    id="bg-div"
+  >
+    <div
+      className="row justify-content-center"
+    >
+      <div
+        className="col-lg-9 col-12"
+      >
+        <div
+          className="card card0"
+        >
+          <div
+            className="d-flex"
+            id="wrapper"
+          >
+            <Sidebar />
+            <div
+              id="page-content-wrapper"
+            >
+              <Switch>
+                <Route
+                  component={[Function]}
+                  exact={true}
+                  path="/"
+                />
+                <Route
+                  component={[Function]}
+                  path="/login"
+                />
+                <Route
+                  component={[Function]}
+                  path="/register"
+                />
+                <Route
+                  component={[Function]}
+                />
+              </Switch>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <GlobalStyleComponent />
+</styled.div>
+`;

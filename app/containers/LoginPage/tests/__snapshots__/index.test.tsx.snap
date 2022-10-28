@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginPage /> should render and match the snapshot 1`] = `
+<React.Fragment>
+  <Helmet
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Sign In
+    </title>
+    <meta
+      content="Login form for login in Bank Management System"
+      name="description"
+    />
+  </Helmet>
+  <Helpdesk />
+  <div
+    className="row justify-content-center"
+  >
+    <div
+      className="text-center"
+      id="test"
+    >
+      Sign In
+    </div>
+  </div>
+  <div
+    className="row justify-content-center"
+  >
+    <div
+      className="col-11"
+    >
+      <div
+        className="form-card"
+      >
+        <Memo(Connect(ReduxForm)) />
+      </div>
+    </div>
+  </div>
+</React.Fragment>
+`;
