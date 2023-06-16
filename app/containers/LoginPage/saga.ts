@@ -5,7 +5,7 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { updateCurrentUser, loginError } from './actions';
 import ActionTypes from './constants';
-
+import { USER_API_BASE_URL } from 'utils/constants';
 import request from 'utils/request';
 
 /**
@@ -13,7 +13,7 @@ import request from 'utils/request';
  */
 export function* loginUser(action) {
   const { userName, userPass } = action.payload.formData;
-  const requestURL = `http://localhost:8090/api/v1/user/login`;
+  const requestURL = `${USER_API_BASE_URL}user/login`;
   try {
     // Call our request helper (see 'utils/request')
     const userData = yield call(request, requestURL, {

@@ -5,7 +5,7 @@
 import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { userRegisterSuccess, userRegisterError } from './actions';
 import ActionTypes from './constants';
-
+import { USER_API_BASE_URL } from 'utils/constants';
 import request from 'utils/request';
 import { constants } from 'crypto';
 
@@ -18,7 +18,7 @@ export function* registerUser(action) {
   // Select username from store
   let { formData } = action.payload;
   
-  const requestURL = `http://localhost:8090/api/v1/user/register`;
+  const requestURL = `${USER_API_BASE_URL}user/register`;
   try {
     
     // Call our request helper (see 'utils/request')

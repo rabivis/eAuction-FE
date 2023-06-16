@@ -5,7 +5,7 @@
  import { call, put, select, takeLatest } from 'redux-saga/effects';
  import { fetchProductListSuccess, fetchProductDetailsSuccess, fetchProductDetailsError, fetchProductListError } from './actions';
  import ActionTypes from './constants';
- 
+ import { SELLER_API_BASE_URL } from 'utils/constants';
  import request from 'utils/request';
  import { constants } from 'crypto';
  
@@ -17,7 +17,7 @@
  export function* getProductList(action) {
    // Select username from store
    
-   const requestURL = `http://localhost:8090/api/v1/seller/product-list`;
+   const requestURL = `${SELLER_API_BASE_URL}seller/product-list`;
    try {
      
      // Call our request helper (see 'utils/request')
@@ -39,7 +39,7 @@
     // Select username from store
     let { productId } = action.payload;
     console.log({productId })
-    const requestURL = `http://localhost:8090/api/v1/seller/show-bid`;
+    const requestURL = `${SELLER_API_BASE_URL}seller/show-bid`;
     try {
       
       // Call our request helper (see 'utils/request')
